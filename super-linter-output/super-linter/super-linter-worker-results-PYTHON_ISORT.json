@@ -1,0 +1,1 @@
+{ "Seq": 1, "Host": ":", "Starttime": 1769022819.040, "JobRuntime": 0.138, "Send": 0, "Receive": 0, "Exitval": 0, "Signal": 0, "Command": "isort --sp /github/workspace/pyproject.toml --overwrite-in-place /github/workspace/test.py", "V": [ "/github/workspace/test.py" ], "Stdout": "", "Stderr": "" }
