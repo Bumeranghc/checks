@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v5 # zizmor: ignore[artipacked]
         with:
           fetch-depth: 0
 
@@ -40,6 +40,7 @@ jobs:
           PYTHON_FLAKE8_CONFIG_FILE: .flake8
           PYTHON_BLACK_CONFIG_FILE: pyproject.toml
           PYTHON_ISORT_CONFIG_FILE: pyproject.toml
+          GITHUB_ACTIONS_ZIZMOR_CONFIG_FILE: .zizmor.yaml
           VALIDATE_PYTHON_BLACK: true
           VALIDATE_PYTHON_FLAKE8: true
           VALIDATE_PYTHON_ISORT: true
