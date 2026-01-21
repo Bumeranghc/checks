@@ -1,1 +1,0 @@
-{ "Seq": 1, "Host": ":", "Starttime": 1769022818.553, "JobRuntime": 0.167, "Send": 0, "Receive": 0, "Exitval": 0, "Signal": 0, "Command": "flake8 --config=/github/workspace/.flake8 /github/workspace/test.py", "V": [ "/github/workspace/test.py" ], "Stdout": "", "Stderr": "" }
