@@ -26,10 +26,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v5 # zizmor: ignore[artipacked]
         with:
           fetch-depth: 0
-          persist-credentials: true
 
       - name: Super linter
         uses: super-linter/super-linter/slim@v8.3.2
@@ -41,12 +40,19 @@ jobs:
           PYTHON_FLAKE8_CONFIG_FILE: .flake8
           PYTHON_BLACK_CONFIG_FILE: pyproject.toml
           PYTHON_ISORT_CONFIG_FILE: pyproject.toml
+          GITHUB_ACTIONS_ZIZMOR_CONFIG_FILE: .zizmor.yaml
           VALIDATE_PYTHON_BLACK: true
           VALIDATE_PYTHON_FLAKE8: true
           VALIDATE_PYTHON_ISORT: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_MARKDOWN_PRETTIER: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: true
           VALIDATE_ALL_CODEBASE: false
           FIX_PYTHON_BLACK: true
           FIX_PYTHON_ISORT: true
+          FIX_MARKDOWN: true
+          FIX_MARKDOWN_PRETTIER: true
 
       - name: Commit and push linting fixes
         if: >
